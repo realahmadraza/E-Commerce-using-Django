@@ -1,0 +1,44 @@
+{% extends 'Store/main.html' %}
+
+{% block contents %}
+
+		<!-- SECTION -->
+		 {%if companydetails%}
+		<div class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+					<div>
+						<i class="fas fa-h1    "><h1>ABOUT US</h1></i>
+						<br>
+						<i class="fas fa-h2    "><h3>Welcome to {{companydetails.company_name}}</h3></i>
+						<br>
+						<i class="fas fa-h2    "><p>{{companydetails.about_us}}</p></i>
+						<br>
+						<i class="fas fa-h1    "><h1>PRIVACY POLICY</h1></i>
+						<br>
+						<i class="fas fa-h2    "><p>{{companydetails.privacy_policy}}</p></i>
+						<br>
+						<i class="fas fa-h1    "><h1>TERMS AND CONDITIONS</h1></i>
+						<br>
+						<i class="fas fa-h2    "><p>{{companydetails.Terms_and_conditions}}</p></i>
+						<br>
+						<i class="fas fa-h1    "><h1>REPORT</h1></i>
+						<br>
+						<i class="fas fa-h2    "><p>If you want to report or complain about any services which you did'nt like
+							call us on</i> <i><a href="tel:{{companydetails.phone}}">{{companydetails.phone}}</i></a></p>
+						<i class="fas fa-h2 "><p>or you can send you report or complain on our email</i>  <i><a href = "mailto:{{companydetails.email}}">{{companydetails.email}}</i><a/></p><p>Thank You</p>
+						
+
+					</div>
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		{% endif %}
+		<!-- /SECTION -->
+
+
+{% endblock contents %}
